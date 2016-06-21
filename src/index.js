@@ -40,7 +40,7 @@ export default class AgAutocomplete extends Component {
 
       templates: {
         suggestion: (suggestion) => {
-          return this.props.index === 'Locations' && this.props.currentLanguage ? suggestion._highlightResult.name[this.props.currentLanguage].value :  suggestion._highlightResult.name.value
+          return this.props.currentLanguage ? suggestion._highlightResult.name[this.props.currentLanguage].value :  suggestion._highlightResult.name.value
         }
       }
     }
