@@ -1,0 +1,113 @@
+/* TODO: insert main styles of your demo here */
+
+body {
+    background: #fefefe;
+
+    font-family: Sans-Serif;
+
+    line-height: 1.5;
+}
+
+form label {
+    display: block;
+}
+
+header {
+    position: fixed;
+    padding: 0.5em;
+    top: 0;
+
+    text-align: center;
+
+    color: #333;
+    border: 0.1em solid #bbb;
+
+    background-image: url(./images/bgnoise_lg.png);
+}
+
+header h1 {
+    margin: 0;
+}
+
+header .description {
+    color: #888;
+}
+
+.highlight {
+    background: rgb(255, 255, 175);
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.github-fork-ribbon {
+    position: fixed;
+
+    letter-spacing: 0.01em;
+}
+
+article {
+    display: block !important;
+
+    margin-top: 6em;
+    margin-left: auto;
+    margin-right: auto;
+
+    max-width: 768px;
+}
+
+article section {
+    margin-bottom: 2em;
+}
+
+article h2 {
+    margin-top: 2em;
+}
+
+article .description {
+    margin: 1em;
+    padding: 1em;
+
+    max-width: 60em;
+
+    background: #fafafa;
+
+    border: 0.1em solid #eee;
+}
+
+article .description h2 {
+    margin: 0;
+}
+
+.algolia-autocomplete {
+  width: 100%;
+}
+.algolia-autocomplete .aa-input, .algolia-autocomplete .aa-hint {
+  width: 100%;
+  min-height: 30px;
+  text-indent: 10px;
+}
+.algolia-autocomplete .aa-hint {
+  color: #999;
+}
+.algolia-autocomplete .aa-dropdown-menu {
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #999;
+  border-top: none;
+}
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion {
+  cursor: pointer;
+  padding: 5px 4px;
+}
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion.aa-cursor {
+  background-color: #B2D7FF;
+}
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion em {
+  font-weight: bold;
+  font-style: normal;
+}
