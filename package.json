@@ -98,10 +98,7 @@
     "boilerplate"
   ],
   "license": "MIT",
-  "pre-push": [
-    "test",
-    "test:lint"
-  ],
+  "pre-push": [],
   "dependencies": {
     "autocomplete.js": "^0.20.1"
   }

@@ -37,9 +37,10 @@ export default class AgAutocomplete extends Component {
         })
       },
       displayKey: displayKey,
+
       templates: {
         suggestion: (suggestion) => {
-          return suggestion._highlightResult.name.value
+          return this.props.index === 'Locations' && this.props.currentLanguage ? suggestion._highlightResult.name[this.props.currentLanguage].value :  suggestion._highlightResult.name.value
         }
       }
     }
@@ -50,7 +51,7 @@ export default class AgAutocomplete extends Component {
 
   render() {
     return (
-      <input id={this.props.inputId} {...this.props} />
+      <input id={this.props.inputId} placeholder={this.props.placeHolder || 'Enter a search term...' } {...this.props} />
     )
   }
 }
@@ -61,10 +62,12 @@ AgAutocomplete.defaultProps = {
 
 AgAutocomplete.propTypes = {
   apiId: PropTypes.string.isRequired,
+  currentLanguage: PropTypes.string,
   displayKey: PropTypes.string.isRequired,
   hitsPerPage: PropTypes.number,
   index: PropTypes.string.isRequired,
   inputId: PropTypes.string.isRequired,
   options: PropTypes.object,
-  searchApiKey: PropTypes.string.isRequired
+  searchApiKey: PropTypes.string.isRequired,
+  placeHolder: PropTypes.string
 }
