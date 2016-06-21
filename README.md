@@ -1,3 +1,3 @@
-#React algolia wrapper
+#React algolia search
 
 TODO
