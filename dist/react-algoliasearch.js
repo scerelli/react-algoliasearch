@@ -97,6 +97,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	  _createClass(AgAutocomplete, [{
 	    key: 'componentDidMount',
 	    value: function componentDidMount() {
+	      var _this2 = this;
+	
 	      //this thing sucks but for now it must be like this or window will be undefined.
 	      var algoliasearch = __webpack_require__(3);
 	      var autocomplete = __webpack_require__(37);
@@ -123,9 +125,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	          });
 	        },
 	        displayKey: displayKey,
+	
 	        templates: {
 	          suggestion: function suggestion(_suggestion) {
-	            return _suggestion._highlightResult.name.value;
+	            return _this2.props.currentLanguage ? _suggestion._highlightResult.name[_this2.props.currentLanguage].value : _suggestion._highlightResult.name.value;
 	          }
 	        }
 	      };
@@ -136,7 +139,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }, {
 	    key: 'render',
 	    value: function render() {
-	      return _react2.default.createElement('input', _extends({ id: this.props.inputId }, this.props));
+	      return _react2.default.createElement('input', _extends({ id: this.props.inputId, placeholder: this.props.placeholder || 'Enter a search term...' }, this.props));
 	    }
 	  }]);
 	
@@ -152,12 +155,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	AgAutocomplete.propTypes = {
 	  apiId: _react.PropTypes.string.isRequired,
+	  currentLanguage: _react.PropTypes.string,
 	  displayKey: _react.PropTypes.string.isRequired,
 	  hitsPerPage: _react.PropTypes.number,
 	  index: _react.PropTypes.string.isRequired,
 	  inputId: _react.PropTypes.string.isRequired,
 	  options: _react.PropTypes.object,
-	  searchApiKey: _react.PropTypes.string.isRequired
+	  searchApiKey: _react.PropTypes.string.isRequired,
+	  placeholder: _react.PropTypes.string
 	};
 
 /***/ },
