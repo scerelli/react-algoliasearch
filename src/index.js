@@ -51,7 +51,10 @@ export default class AgAutocomplete extends Component {
 
   render() {
     return (
-      <input id={this.props.inputId} placeholder={this.props.placeholder || 'Enter a search term...' } {...this.props} />
+      <input
+      id={this.props.inputId}
+      placeholder={this.props.placeholder || 'Enter a search term...' }
+      {...this.props} />
     )
   }
 }

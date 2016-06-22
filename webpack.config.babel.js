@@ -26,8 +26,8 @@ const config = {
     demo: path.join(ROOT_PATH, 'demo'),
     tests: path.join(ROOT_PATH, 'tests')
   },
-  filename: 'react-algoliasearch',
-  library: 'ReactAlgoliaSearch'
+  filename: 'boilerplate',
+  library: 'Boilerplate'
 };
 const CSS_PATHS = [
   config.paths.demo,
