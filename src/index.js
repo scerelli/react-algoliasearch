@@ -15,20 +15,21 @@ export default class AgAutocomplete extends Component {
     const algoliasearch = require('algoliasearch')
     const autocomplete = require('autocomplete.js')
     const {
-      apiId,
-      searchApiKey,
+      appId,
+      apiKey,
+      hitsPerPage,
       index,
       displayKey,
       options,
       inputId
     } = this.props
 
-    const agClient = algoliasearch(apiId, searchApiKey)
+    const agClient = algoliasearch(appId, apiKey)
     const agIndex  = agClient.initIndex(index)
 
     const defaultOptions = {
       source: function(q, cb) {
-        agIndex.search(q, { hitsPerPage: 10 }, (error, content) => {
+        agIndex.search(q, { hitsPerPage: hitsPerPage || 10 }, (error, content) => {
           if (error) {
             cb([])
             return
@@ -36,8 +37,7 @@ export default class AgAutocomplete extends Component {
           cb(content.hits, content);
         })
       },
-      displayKey: displayKey,
-
+      displayKey: displayKey || 'value',
       templates: {
         suggestion: (suggestion) => {
           return this.props.currentLanguage ? suggestion._highlightResult.name[this.props.currentLanguage].value :  suggestion._highlightResult.name.value
@@ -64,13 +64,17 @@ AgAutocomplete.defaultProps = {
 }
 
 AgAutocomplete.propTypes = {
-  apiId: PropTypes.string.isRequired,
+  apiKey: PropTypes.string.isRequired,
+  appId: PropTypes.string.isRequired,
   currentLanguage: PropTypes.string,
-  displayKey: PropTypes.string.isRequired,
   hitsPerPage: PropTypes.number,
   index: PropTypes.string.isRequired,
   inputId: PropTypes.string.isRequired,
+  name: PropTypes.string,
   options: PropTypes.object,
-  searchApiKey: PropTypes.string.isRequired,
-  placeholder: PropTypes.string
+  placeholder: PropTypes.string,
+  displayKey: React.PropTypes.oneOfType([
+    React.PropTypes.string,
+    React.PropTypes.func
+  ])
 }
