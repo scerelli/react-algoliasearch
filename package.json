@@ -27,8 +27,6 @@
   },
   "main": "dist-modules",
   "devDependencies": {
-    "algoliasearch": "^3.15.1",
-    "autocomplete.js": "^0.20.1",
     "babel-cli": "^6.10.1",
     "babel-core": "^6.9.1",
     "babel-eslint": "^6.0.4",
@@ -100,6 +98,7 @@
   "license": "MIT",
   "pre-push": [],
   "dependencies": {
-    "autocomplete.js": "^0.20.1"
+    "autocomplete.js": "^0.20.1",
+    "algoliasearch": "^3.15.1"
   }
 }
