@@ -24,7 +24,6 @@ import AgAutocomplete from 'react-algoliasearch'
           displayKey="name"
           index={"contacts"}
           inputId="input-search"
-          name="contacts"
           placeholder="Search..."
         />
       </div>

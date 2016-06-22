@@ -22,7 +22,6 @@ export default class App extends React.Component {
         displayKey={this.displayKey}
         index={"contacts"}
         inputId="input-search"
-        name="contacts"
         placeholder="Search..."
         />
       </div>
