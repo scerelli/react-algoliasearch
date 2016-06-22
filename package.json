@@ -2,11 +2,14 @@
   "name": "react-algoliasearch",
   "description": "A react component for algolia autocomplete",
   "author": "Stefano Cerelli (scerelli), Antonio Voce (7091lapS)",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "homepage": "https://scerelli.github.io/react-algoliasearch/",
-  "url": "https://github.com/scerelli/react-algoliasearch",
+   "repository": {
+    "type": "git",
+    "url": "http://github.com/scerelli/react-algoliasearch.git"
+  },
   "bugs": {
-    "url": "https://github.com/scerelli/react-algoliasearch/issues"
+    "url": "http://github.com/scerelli/react-algoliasearch/issues"
   },
   "scripts": {
     "start": "webpack-dev-server -d --inline --progress --colors",
