@@ -43,7 +43,6 @@ Can be either a key string or a function that transforms a suggestion object int
 - `placeholder` - The input's placeholder. (optional)
 - `hitsPerPage` - The number of results that your search will produce. Default is 10. (optional)
 - `options` - Pass any other [autocomplete.js](https://github.com/algolia/autocomplete.js) option through this object prop. (optional)
-- `onSelect` - Pass any other [autocomplete.js](https://github.com/algolia/autocomplete.js) option through this object prop. (optional)
 
 ### Custom Events Props
 
