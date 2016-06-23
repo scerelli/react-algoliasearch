@@ -47,6 +47,13 @@ export default class AgAutocomplete extends Component {
 
     const AgOptions = R.merge(defaultOptions, options)
     autocomplete(`#${inputId}`, {hint: false}, [AgOptions])
+    .on('autocomplete:opened', this.props.opened)
+    .on('autocomplete:shown', this.props.shown)
+    .on('autocomplete:closed', this.props.closed)
+    .on('autocomplete:updated', this.props.updated)
+    .on('autocomplete:cursorchanged', this.props.cursorchanged)
+    .on('autocomplete:selected', this.props.selected)
+    .on('autocomplete:autocompleted', this.props.autocompleted)
   }
 
   render() {
@@ -60,7 +67,14 @@ export default class AgAutocomplete extends Component {
 }
 
 AgAutocomplete.defaultProps = {
-  options: {}
+  options: {},
+  opened: () => {},
+  shown: () => {},
+  closed: () => {},
+  updated: () => {},
+  cursorchanged: () => {},
+  selected: () => {},
+  autocompleted: () => {}
 }
 
 AgAutocomplete.propTypes = {
@@ -72,6 +86,13 @@ AgAutocomplete.propTypes = {
   inputId: PropTypes.string.isRequired,
   name: PropTypes.string,
   options: PropTypes.object,
+  opened: PropTypes.func,
+  shown: PropTypes.func,
+  closed: PropTypes.func,
+  updated: PropTypes.func,
+  cursorchanged: PropTypes.func,
+  selected: PropTypes.func,
+  autocompleted: PropTypes.func,
   placeholder: PropTypes.string,
   displayKey: React.PropTypes.oneOfType([
     React.PropTypes.string,

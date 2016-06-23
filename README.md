@@ -43,5 +43,16 @@ Can be either a key string or a function that transforms a suggestion object int
 - `placeholder` - The input's placeholder. (optional)
 - `hitsPerPage` - The number of results that your search will produce. Default is 10. (optional)
 - `options` - Pass any other [autocomplete.js](https://github.com/algolia/autocomplete.js) option through this object prop. (optional)
+- `onSelect` - Pass any other [autocomplete.js](https://github.com/algolia/autocomplete.js) option through this object prop. (optional)
+
+### Custom Events Props
+
+- `opened` – Triggered when the dropdown menu of the autocomplete is opened. (optional)
+- `shown` – Triggered when the dropdown menu of the autocomplete is shown (opened and non-empty). (optional)
+- `closed` – Triggered when the dropdown menu of the autocomplete is closed. (optional)
+- `updated` – Triggered when a dataset is rendered. (optional)
+- `cursorchanged` – Triggered when the dropdown menu cursor is moved to a different suggestion. The event handler will be invoked with 3 arguments: the event object, the suggestion object, and the name of the dataset the suggestion belongs to. (optional)
+- `selected` – Triggered when a suggestion from the dropdown menu is selected. The event handler will be invoked with 3 arguments: the event object, the suggestion object, and the name of the dataset the suggestion belongs to. (optional)
+- `autocompleted` – Triggered when the query is autocompleted. Autocompleted means the query was changed to the hint. The event handler will be invoked with 3 arguments: the event object, the suggestion object, and the name of the dataset the suggestion belongs to. (optional)
 
 

@@ -9,6 +9,12 @@ export default class App extends React.Component {
     return `${data.name}, ${data.city}`
   }
 
+  suggestionSelected(event, suggestion, dataset) {
+    console.log(event)
+    console.log(suggestion)
+    console.log(dataset)
+  }
+
   render() {
     //change appId and searchApiKey with your own keys
     //change index with your own index
@@ -23,6 +29,7 @@ export default class App extends React.Component {
         index={"contacts"}
         inputId="input-search"
         placeholder="Search..."
+        selected={this.suggestionSelected}
         />
       </div>
     )
