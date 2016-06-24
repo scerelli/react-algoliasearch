@@ -1,7 +1,7 @@
 {
   "name": "react-algoliasearch",
   "description": "A react component for algolia autocomplete",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "scripts": {
     "start": "webpack-dev-server -d --inline --progress --colors",
     "test": "karma start",
@@ -87,6 +87,7 @@
     "react",
     "reactjs",
     "algolia",
+    "react-component",
     "autocomplete.js"
   ],
   "license": "MIT",
