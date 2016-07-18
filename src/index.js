@@ -14,6 +14,7 @@ export default class AgAutocomplete extends Component {
     //this thing sucks but for now it must be like this or window will be undefined.
     const algoliasearch = require('algoliasearch')
     const autocomplete = require('autocomplete.js')
+
     const {
       appId,
       apiKey,
@@ -57,11 +58,13 @@ export default class AgAutocomplete extends Component {
   }
 
   render() {
+    const  { otherProps, placeholder, inputId } = this.props
+
     return (
       <input
-      id={this.props.inputId}
-      placeholder={this.props.placeholder || 'Enter a search term...' }
-      {...this.props} />
+      id={inputId}
+      placeholder={placeholder || 'Enter a search term...'}
+      {...otherProps} />
     )
   }
 }
@@ -86,6 +89,7 @@ AgAutocomplete.propTypes = {
   inputId: PropTypes.string.isRequired,
   name: PropTypes.string,
   options: PropTypes.object,
+  otherProps: PropTypes.object,
   opened: PropTypes.func,
   shown: PropTypes.func,
   closed: PropTypes.func,

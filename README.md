@@ -44,6 +44,8 @@ Can be either a key string or a function that transforms a suggestion object int
 - `hitsPerPage` - The number of results that your search will produce. Default is 10. (optional)
 - `options` - Pass any other [autocomplete.js](https://github.com/algolia/autocomplete.js) option through this object prop. (optional)
 
+Any other React prop can be passed through `otherProps`
+
 ### Custom Events Props
 
 - `opened` – Triggered when the dropdown menu of the autocomplete is opened. (optional)
