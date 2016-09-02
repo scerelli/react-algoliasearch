@@ -22,7 +22,8 @@ export default class AgAutocomplete extends Component {
       index,
       displayKey,
       options,
-      inputId
+      inputId,
+      defaultValue
     } = this.props
 
     const agClient = algoliasearch(appId, apiKey)
@@ -47,7 +48,9 @@ export default class AgAutocomplete extends Component {
     }
 
     const AgOptions = R.merge(defaultOptions, options)
-    autocomplete(`#${inputId}`, {hint: false}, [AgOptions])
+    let search = autocomplete(`#${inputId}`, {hint: false}, [AgOptions])
+
+    search
     .on('autocomplete:opened', this.props.opened)
     .on('autocomplete:shown', this.props.shown)
     .on('autocomplete:closed', this.props.closed)
@@ -55,6 +58,8 @@ export default class AgAutocomplete extends Component {
     .on('autocomplete:cursorchanged', this.props.cursorchanged)
     .on('autocomplete:selected', this.props.selected)
     .on('autocomplete:autocompleted', this.props.autocompleted)
+
+    defaultValue ? search.autocomplete.setVal(defaultValue) : false
   }
 
   render() {
@@ -87,6 +92,7 @@ AgAutocomplete.propTypes = {
   hitsPerPage: PropTypes.number,
   index: PropTypes.string.isRequired,
   inputId: PropTypes.string.isRequired,
+  defaultValue: PropTypes.string,
   name: PropTypes.string,
   options: PropTypes.object,
   otherProps: PropTypes.object,
