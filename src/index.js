@@ -42,7 +42,8 @@ export default class AgAutocomplete extends Component {
       displayKey: displayKey || 'value',
       templates: {
         suggestion: (suggestion) => {
-          return this.props.currentLanguage ? suggestion._highlightResult.name[this.props.currentLanguage].value :  suggestion._highlightResult.name.value
+          const key = this.props.keyName || 'name'
+          return this.props.currentLanguage ? suggestion._highlightResult[key][this.props.currentLanguage].value :  suggestion._highlightResult[key].value
         }
       }
     }
@@ -92,6 +93,7 @@ AgAutocomplete.propTypes = {
   hitsPerPage: PropTypes.number,
   index: PropTypes.string.isRequired,
   inputId: PropTypes.string.isRequired,
+  keyName: PropTypes.string,
   defaultValue: PropTypes.string,
   name: PropTypes.string,
   options: PropTypes.object,

@@ -38,6 +38,7 @@ import AgAutocomplete from 'react-algoliasearch'
 - `currentLanguage` - If using a multilanguage dataset, pass your current language through this prop. (optional)
 - `displayKey` - For a given suggestion object, determines the string representation of it. This will be used when setting the value of the input control after a suggestion is selected.
 Can be either a key string or a function that transforms a suggestion object into a string. Defaults to value. (optional)
+- `keyName' - The key contained in your Algolia Dataset that you would like to use as result, default is `name`. (optional)
 - `index` - The Algolia index you want to connect. (required)
 - `inputId` - The Id of the generated input field. (required)
 - `placeholder` - The input's placeholder. (optional)

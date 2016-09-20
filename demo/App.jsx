@@ -26,6 +26,7 @@ export default class App extends React.Component {
         apiKey={"6be0576ff61c053d5f9a3225e2a90f76"}
         appId={"latency"}
         displayKey={this.displayKey}
+        keyName="name"
         index={"contacts"}
         inputId="input-search"
         placeholder="Search..."
