@@ -5,8 +5,16 @@ import R from 'ramda'
 export default class AgAutocomplete extends Component {
   constructor(props) {
     super(props)
+
+    this.search = null
     this.state = {
       values: []
+    }
+  }
+
+  componentWillReceiveProps (nextProps) {
+    if(this.search && this.props.defaultValue !== nextProps.defaultValue) {
+      this.search.autocomplete.setVal(nextProps.defaultValue)
     }
   }
 
@@ -49,9 +57,9 @@ export default class AgAutocomplete extends Component {
     }
 
     const AgOptions = R.merge(defaultOptions, options)
-    let search = autocomplete(`#${inputId}`, {hint: false}, [AgOptions])
+    this.search = autocomplete(`#${inputId}`, {hint: false}, [AgOptions])
 
-    search
+    this.search
     .on('autocomplete:opened', this.props.opened)
     .on('autocomplete:shown', this.props.shown)
     .on('autocomplete:closed', this.props.closed)
@@ -60,7 +68,7 @@ export default class AgAutocomplete extends Component {
     .on('autocomplete:selected', this.props.selected)
     .on('autocomplete:autocompleted', this.props.autocompleted)
 
-    defaultValue ? search.autocomplete.setVal(defaultValue) : false
+    defaultValue ? this.search.autocomplete.setVal(defaultValue) : false
   }
 
   render() {
