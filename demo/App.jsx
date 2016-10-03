@@ -5,10 +5,6 @@ import AgAutocomplete from '../src/index.js';
 
 export default class App extends React.Component {
 
-  constructor(props) {
-    super(props)
-  }
-
   displayKey(data) {
     return `${data.name}, ${data.city}`
   }
