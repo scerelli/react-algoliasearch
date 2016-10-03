@@ -90,7 +90,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	    _this.search = null;
 	    _this.state = {
-	      search: {},
 	      values: []
 	    };
 	    return _this;
