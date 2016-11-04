@@ -31,7 +31,7 @@ export default class App extends React.Component {
           inputId="input-search"
           placeholder="Search..."
           selected={this.suggestionSelected}
-          options={{autoselectOnBlur: true}}
+          options={{autoselectOnBlur: true, hint: false}}
         />
       </div>
     )
