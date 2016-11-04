@@ -56,8 +56,7 @@ export default class AgAutocomplete extends Component {
       }
     }
 
-    const AgOptions = R.merge(defaultOptions, options)
-    this.search = autocomplete(`#${inputId}`, {hint: false}, [AgOptions])
+    this.search = autocomplete(`#${inputId}`, R.merge({hint: false}, options), [defaultOptions])
 
     this.search
     .on('autocomplete:opened', this.props.opened)

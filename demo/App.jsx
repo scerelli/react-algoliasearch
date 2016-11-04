@@ -19,18 +19,19 @@ export default class App extends React.Component {
     //change appId and searchApiKey with your own keys
     //change index with your own index
     return (
-      <div>
-        <Fork className="right" project={pkgInfo.user + '/' + pkgInfo.name} />
+       <div>
+        <Fork className="right" project={`${pkgInfo.user}/${pkgInfo.name}`} />
 
         <AgAutocomplete
-        apiKey={"6be0576ff61c053d5f9a3225e2a90f76"}
-        appId={"latency"}
-        displayKey={this.displayKey}
-        keyName="name"
-        index={"contacts"}
-        inputId="input-search"
-        placeholder="Search..."
-        selected={this.suggestionSelected}
+          apiKey="6be0576ff61c053d5f9a3225e2a90f76"
+          appId="latency"
+          displayKey={this.displayKey}
+          keyName="name"
+          index="contacts"
+          inputId="input-search"
+          placeholder="Search..."
+          selected={this.suggestionSelected}
+          options={{autoselectOnBlur: true}}
         />
       </div>
     )
