@@ -9,11 +9,11 @@
     
 
     
-    <link href="style.9f36a5f36846acd42e21.css" rel="stylesheet">
+    <link href="style.5799315f42289b7bf7f3.css" rel="stylesheet">
     
 
     
-  <link href="style.9f36a5f36846acd42e21.css" rel="stylesheet"></head>
+  <link href="style.5799315f42289b7bf7f3.css" rel="stylesheet"></head>
   <body>
     <div class="pure-g">
       <header class="pure-u-1">
@@ -35,7 +35,7 @@
         <h2>Documentation</h2>
         <section class="documentation">
           <div><div><h1><span>react-algoliasearch</span></h1><p><span>A simple react component to integrate the Algolia search engine in your application.
-You can configure your Algolia index, app Id and api Key by passing props to the component.</span></p><h2><span>Installation</span></h2><p><code>npm install react-algoliasearch --save</code></p><h2><span>Example</span></h2><pre><pre class="lowlight"><code class="hljs js"><span class="hljs-keyword">import</span> AgAutocomplete <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;react-algoliasearch&#x27;</span>
+You can configure your Algolia indices, app Id and api Key by passing props to the component.</span></p><h2><span>Installation</span></h2><p><code>npm install react-algoliasearch --save</code></p><h2><span>Example</span></h2><pre><pre class="lowlight"><code class="hljs js"><span class="hljs-keyword">import</span> AgAutocomplete <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;react-algoliasearch&#x27;</span>
   ...
 
   render() {
@@ -45,7 +45,7 @@ You can configure your Algolia index, app Id and api Key by passing props to the
           apiKey={&quot;6be0576ff61c053d5f9a3225e2a90f76&quot;}
           appId={&quot;latency&quot;}
           displayKey=&quot;name&quot;
-          index={&quot;contacts&quot;}
+          indices={[{index: &#x27;contacts&#x27;}]}
           inputId=&quot;input-search&quot;
           placeholder=&quot;Search...&quot;
         /&gt;
@@ -53,19 +53,19 @@ You can configure your Algolia index, app Id and api Key by passing props to the
     )
 }
 </code></pre></pre><h2><span>Props</span></h2><ul><li><code>appId</code><span> - Your algoliasearch app ID. (required)</span></li><li><code>apiKey</code><span> - Your algoliasearch api key. (required)</span></li><li><code>currentLanguage</code><span> - If using a multilanguage dataset, pass your current language through this prop. (optional)</span></li><li><code>displayKey</code><span> - For a given suggestion object, determines the string representation of it. This will be used when setting the value of the input control after a suggestion is selected.
-Can be either a key string or a function that transforms a suggestion object into a string. Defaults to value. (optional)</span></li><li><code>keyName</code><span> - The key contained in your Algolia Dataset that you would like to use as result, default is </span><code>name</code><span>. (optional)</span></li><li><code>index</code><span> - The Algolia index you want to connect. (required)</span></li><li><code>inputId</code><span> - The Id of the generated input field. (required)</span></li><li><code>placeholder</code><span> - The input&#x27;s placeholder. (optional)</span></li><li><code>hitsPerPage</code><span> - The number of results that your search will produce. Default is 10. (optional)</span></li><li><code>defaultValue</code><span> - The input&#x27;s initial value will be set to the value of this prop. (optional)</span></li><li><code>options</code><span> - Pass any other </span><a href="https://github.com/algolia/autocomplete.js"><span>autocomplete.js</span></a><span> option through this object prop. (optional)</span></li></ul><p><span>Any other React prop can be passed through </span><code>otherProps</code></p><h3><span>Custom Events Props</span></h3><ul><li><code>opened</code><span> – Triggered when the dropdown menu of the autocomplete is opened. (optional)</span></li><li><code>shown</code><span> – Triggered when the dropdown menu of the autocomplete is shown (opened and non-empty). (optional)</span></li><li><code>closed</code><span> – Triggered when the dropdown menu of the autocomplete is closed. (optional)</span></li><li><code>updated</code><span> – Triggered when a dataset is rendered. (optional)</span></li><li><code>cursorchanged</code><span> – Triggered when the dropdown menu cursor is moved to a different suggestion. The event handler will be invoked with 3 arguments: the event object, the suggestion object, and the name of the dataset the suggestion belongs to. (optional)</span></li><li><code>selected</code><span> – Triggered when a suggestion from the dropdown menu is selected. The event handler will be invoked with 3 arguments: the event object, the suggestion object, and the name of the dataset the suggestion belongs to. (optional)</span></li><li><code>autocompleted</code><span> – Triggered when the query is autocompleted. Autocompleted means the query was changed to the hint. The event handler will be invoked with 3 arguments: the event object, the suggestion object, and the name of the dataset the suggestion belongs to. (optional)</span></li></ul></div></div>
+Can be either a key string or a function that transforms a suggestion object into a string. Defaults to value. (optional)</span></li><li><code>keyName</code><span> - The key contained in your Algolia Dataset that you would like to use as result, default is </span><code>name</code><span>. (optional)</span></li><li><code>indices</code><span> - Array of Algolia indices you want to connect. (required)</span></li><li><code>inputId</code><span> - The Id of the generated input field. (required)</span></li><li><code>placeholder</code><span> - The input&#x27;s placeholder. (optional)</span></li><li><code>hitsPerPage</code><span> - The number of results that your search will produce. Default is 10. (optional)</span></li><li><code>defaultValue</code><span> - The input&#x27;s initial value will be set to the value of this prop. (optional)</span></li><li><code>options</code><span> - Pass any other </span><a href="https://github.com/algolia/autocomplete.js"><span>autocomplete.js</span></a><span> option through this object prop. (optional)</span></li></ul><p><span>Any other React prop can be passed through </span><code>otherProps</code></p><h3><span>Custom Events Props</span></h3><ul><li><code>opened</code><span> – Triggered when the dropdown menu of the autocomplete is opened. (optional)</span></li><li><code>shown</code><span> – Triggered when the dropdown menu of the autocomplete is shown (opened and non-empty). (optional)</span></li><li><code>closed</code><span> – Triggered when the dropdown menu of the autocomplete is closed. (optional)</span></li><li><code>updated</code><span> – Triggered when a dataset is rendered. (optional)</span></li><li><code>cursorchanged</code><span> – Triggered when the dropdown menu cursor is moved to a different suggestion. The event handler will be invoked with 3 arguments: the event object, the suggestion object, and the name of the dataset the suggestion belongs to. (optional)</span></li><li><code>selected</code><span> – Triggered when a suggestion from the dropdown menu is selected. The event handler will be invoked with 3 arguments: the event object, the suggestion object, and the name of the dataset the suggestion belongs to. (optional)</span></li><li><code>autocompleted</code><span> – Triggered when the query is autocompleted. Autocompleted means the query was changed to the hint. The event handler will be invoked with 3 arguments: the event object, the suggestion object, and the name of the dataset the suggestion belongs to. (optional)</span></li></ul></div></div>
         </section>
       </article>
     </div>
 
     
-      <script src="manifest.3e46808f8a03dbe4c87c.js"></script>
+      <script src="manifest.8b2fb12220e229647d5a.js"></script>
     
-      <script src="vendors.a4c6074ed3abf6346d75.js"></script>
+      <script src="vendors.e3a125abfc89b06bbaa6.js"></script>
     
-      <script src="style.9f36a5f36846acd42e21.js"></script>
+      <script src="style.5799315f42289b7bf7f3.js"></script>
     
-      <script src="app.091bf30d86c4431e3867.js"></script>
+      <script src="app.0a4d27d81e5f29cf71a1.js"></script>
     
-  <script type="text/javascript" src="manifest.3e46808f8a03dbe4c87c.js"></script><script type="text/javascript" src="vendors.a4c6074ed3abf6346d75.js"></script><script type="text/javascript" src="style.9f36a5f36846acd42e21.js"></script><script type="text/javascript" src="app.091bf30d86c4431e3867.js"></script></body>
+  <script type="text/javascript" src="manifest.8b2fb12220e229647d5a.js"></script><script type="text/javascript" src="vendors.e3a125abfc89b06bbaa6.js"></script><script type="text/javascript" src="style.5799315f42289b7bf7f3.js"></script><script type="text/javascript" src="app.0a4d27d81e5f29cf71a1.js"></script></body>
 </html>
