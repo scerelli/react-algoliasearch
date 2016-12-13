@@ -27,7 +27,7 @@ export default class App extends React.Component {
           appId="latency"
           displayKey={this.displayKey}
           keyName="name"
-          index="contacts"
+          indices={[{index: 'contacts'}]}
           inputId="input-search"
           placeholder="Search..."
           selected={this.suggestionSelected}

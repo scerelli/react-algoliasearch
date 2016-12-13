@@ -1,7 +1,7 @@
 # react-algoliasearch
 
 A simple react component to integrate the Algolia search engine in your application.
-You can configure your Algolia index, app Id and api Key by passing props to the component.
+You can configure your Algolia indices, app Id and api Key by passing props to the component.
 
 
 
@@ -22,7 +22,7 @@ import AgAutocomplete from 'react-algoliasearch'
           apiKey={"6be0576ff61c053d5f9a3225e2a90f76"}
           appId={"latency"}
           displayKey="name"
-          index={"contacts"}
+          indices={[{index: 'contacts'}]}
           inputId="input-search"
           placeholder="Search..."
         />
@@ -39,7 +39,7 @@ import AgAutocomplete from 'react-algoliasearch'
 - `displayKey` - For a given suggestion object, determines the string representation of it. This will be used when setting the value of the input control after a suggestion is selected.
 Can be either a key string or a function that transforms a suggestion object into a string. Defaults to value. (optional)
 - `keyName` - The key contained in your Algolia Dataset that you would like to use as result, default is `name`. (optional)
-- `index` - The Algolia index you want to connect. (required)
+- `indices` - Array of Algolia indices you want to connect. (required)
 - `inputId` - The Id of the generated input field. (required)
 - `placeholder` - The input's placeholder. (optional)
 - `hitsPerPage` - The number of results that your search will produce. Default is 10. (optional)

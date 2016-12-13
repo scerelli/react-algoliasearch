@@ -1,7 +1,7 @@
 {
   "name": "react-algoliasearch",
   "description": "A react component for algolia autocomplete",
-  "version": "1.3.2",
+  "version": "2.0.0",
   "scripts": {
     "start": "webpack-dev-server -d --inline --progress --colors",
     "test": "karma start",
@@ -92,9 +92,9 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "autocomplete.js": "^0.22.0",
     "algoliasearch": "^3.19.0",
-    "ramda": "^0.22.1"
+    "autocomplete.js": "^0.22.0",
+    "deep-assign": "^2.0.0"
   },
   "pre-push": []
 }
