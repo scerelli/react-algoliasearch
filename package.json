@@ -1,7 +1,7 @@
 {
   "name": "react-algoliasearch",
   "description": "A react component for algolia autocomplete",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "scripts": {
     "start": "webpack-dev-server -d --inline --progress --colors",
     "test": "karma start",
