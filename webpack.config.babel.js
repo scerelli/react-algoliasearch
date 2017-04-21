@@ -42,8 +42,7 @@ const STYLE_ENTRIES = [
   'highlight.js/styles/github.css',
   'react-ghfork/gh-fork-ribbon.ie.css',
   'react-ghfork/gh-fork-ribbon.css',
-  './demo/main.css',
-  './style.css'
+  './demo/main.css'
 ];
 
 process.env.BABEL_ENV = TARGET;

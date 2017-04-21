@@ -1,6 +1,7 @@
 'use strict';
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import deepAssign from 'deep-assign';
+import PropTypes from 'prop-types';
 
 export default class AgAutocomplete extends Component {
   constructor(props) {
@@ -73,12 +74,12 @@ export default class AgAutocomplete extends Component {
           }
         }
       }
-      const agOptions = deepAssign(indexOptions, options, itemOptions);
+      const agOptions = deepAssign(indexOptions, itemOptions);
 
       indicesOptions.push(agOptions);
-    })
-
-    this.search = autocomplete(`#${inputId}`, {}, indicesOptions);
+    });
+    
+    this.search = autocomplete(`#${inputId}`, options, indicesOptions);
 
     this.search
       .on('autocomplete:opened', this.props.opened)
