@@ -137,8 +137,8 @@ AgAutocomplete.propTypes = {
   selected: PropTypes.func,
   autocompleted: PropTypes.func,
   placeholder: PropTypes.string,
-  displayKey: React.PropTypes.oneOfType([
-    React.PropTypes.string,
-    React.PropTypes.func
+  displayKey: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.func
   ])
 }
